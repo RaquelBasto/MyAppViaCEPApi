@@ -50,8 +50,14 @@ public class MainActivity extends AppCompatActivity {
                 try {
                     //preencher o cep no lblResposta do layout
                     CEP retorno = new HttpService(txtCep.getText().toString().trim()).execute().get();
-                    txtLagradouro.setText("Lagradouro: ");
-                    lblResposta.setText(retorno.toString());
+
+
+                    txtLagradouro.setText("Logradouro: "+retorno.getLogradouro());
+                    txtComplemento.setText("Complemento: "+retorno.getComplemento());
+                    txtBairro.setText("Bairro: "+retorno.getBairro());
+                    txtCidade.setText("Cidade: "+retorno.getLocalidade());
+                    txtEstado.setText("Estado: "+retorno.getUf());
+
 
 
 
