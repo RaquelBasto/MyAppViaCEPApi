@@ -52,11 +52,11 @@ public class MainActivity extends AppCompatActivity {
                     CEP retorno = new HttpService(txtCep.getText().toString().trim()).execute().get();
 
 
-                    txtLagradouro.setText("Logradouro: "+retorno.getLogradouro());
-                    txtComplemento.setText("Complemento: "+retorno.getComplemento());
-                    txtBairro.setText("Bairro: "+retorno.getBairro());
-                    txtCidade.setText("Cidade: "+retorno.getLocalidade());
-                    txtEstado.setText("Estado: "+retorno.getUf());
+                    txtLagradouro.setText(""+retorno.getLogradouro());
+                    txtComplemento.setText(""+retorno.getComplemento());
+                    txtBairro.setText(""+retorno.getBairro());
+                    txtCidade.setText(""+retorno.getLocalidade());
+                    txtEstado.setText(""+retorno.getUf());
 
 
 
